@@ -1,0 +1,82 @@
+---
+title: "Assignment 1-Quarto"
+format: html
+editor: visual
+---
+
+# Introduction
+
+This my intro for my analysis.
+
+## This is a subheading
+
+This is my intro for my analysis
+
+| Syntax    | Description |
+|-----------|-------------|
+| Paragraph | Text        |
+
+```{r}
+
+```
+
+````         
+# Introduction
+
+This my intro for my analysis. 
+
+## This is a subheading
+
+This is my intro for my analysis
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+
+```{r}
+```{r}
+```{r}
+
+```
+
+```
+
+```
+
+
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+````
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+\`\`\`{r pressure, echo=FALSE} plot(pressure)
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
