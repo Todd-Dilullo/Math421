@@ -1,0 +1,69 @@
+---
+title: "In class codes-Tidyverse"
+author: "Todd DiLullo"
+date: "2024-09-24"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#Make sure to bring library in, in order to use it
+library(tidyverse)
+df <- read_csv('https://covidtracking.com/data/download/all-states-history.csv')
+```
+```{r}
+# Pipe = ctrl shift M
+```
+
+
+```{r}
+# In class codes
+df %>% 
++     select(state,death) %>% 
++     filter(state== "RI")
+#More functions, such as filter, group_by, summarise and arrange
+df %>% 
++     select(state,death) %>% 
++     filter(state == "AZ") %>% 
++     summarise(total_death = sum(death))
+
+df %>% 
++     select(state, date, death) %>% 
++     filter(date >="2021-01-01", date<"2022-01-01") %>%
++     filter(state == "RI"| state == "MA"| state == "CT")
+
+df %>% 
++     select(state, date, death) %>% 
++     filter(date >="2021-01-01", date<"2022-01-01") %>%
++     filter(state == "RI"| state == "MA"| state == "CT") %>%    summarise(average_death = mean(death, na.rm = TRUE))
+
+df %>% 
++     select(state, date, death) %>% 
++     filter(date >="2021-01-01", date<"2022-01-01") %>%
++     filter(state == "RI"| state == "MA"| state == "CT") %>%
++     group_by(state) %>% 
++     summarise(average_death = mean(death, na.rm = TRUE))
+
+df %>% 
++     select(state, date, death) %>% 
++     filter(date >="2021-01-01", date<"2022-01-01") %>%
++     filter(state == "RI"| state == "MA"| state == "CT") %>%
++     group_by(state) %>% 
++     summarise(average_death = mean(death, na.rm = TRUE)) %>% 
++     arrange(average_death)
+```
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
