@@ -55,6 +55,33 @@ df %>%
 +     summarise(average_death = mean(death, na.rm = TRUE)) %>% 
 +     arrange(average_death)
 ```
+```{r}
+df %>% 
++     select(state, date, death) %>% 
++     filter(date >="2021-01-01", date<"2022-01-01") %>%
++     filter(state == "RI"| state == "MA"| state == "CT") %>%
++     group_by(state) %>% 
++     summarise(average_death = mean(death, na.rm = TRUE)) %>% 
++     arrange(average_death)
+```
+```{r}
+df %>% mutate(wd2 = weekdays(date)) %>%
++     filter(state == "RI") %>% 
++     group_by(wd2) %>% 
++     summarise(median_death_RI = median(death, na.rm=TRUE)) %>% 
++     arrange(-median_death_RI)
+
+
+# create a new variable using base R
+df$wd = weekdays(df$date)
+
+# Filter out RI
+df1 = df[df$state == "RI",]
+
+#calculate by groups
+#This code won't work with NA
+by(data = df1$death, INDICES = df$wd, median)
+```
 
 ```
 
