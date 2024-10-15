@@ -1,0 +1,61 @@
+---
+title: "Untitled"
+author: "Todd DiLullo"
+date: "2024-10-08"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+df <- read_csv('https://bryantstats.github.io/math421/data/titanic_missing.csv')
+```
+```{r}
+df
+```
+
+```{r}
+sum(is.na(df))
+```
+
+```{r}
+colSums(is.na(df))
+```
+```{r}
+view(df)
+```
+
+```{r}
+colSums(df=="Missing", na.rm = TRUE)
+```
+```{r}
+# Convert Unknown, Missing and Not Available to NA
+df2 <- replace(df, df == 'Unknown' |
+                  df == 'Missing' |
+                  df == 'Not Available', NA)
+
+df3 = replace(df, df %in% c("Unknown", "missing", "Not Available"), NA)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
