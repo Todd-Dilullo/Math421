@@ -1,0 +1,78 @@
+---
+title: "10/22 In-class ggplot"
+author: "Todd DiLullo"
+date: "2024-10-22"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+```{r}
+library(tidyverse)
+library(knitr)
+df <- read_csv('https://bryantstats.github.io/math421/data/all-states-history.csv')
+library(lubridate)
+```
+```{r}
+df <- read_csv('https://bryantstats.github.io/math421/data/titanic.csv')
+
+df = df  %>%  mutate(Survived = as.character(Survived), 
+                Pclass = as.character(Pclass))
+
+```
+
+```{r}
+ggplot(df)+
+  geom_bar(mapping = aes(x = Survived))
+```
+
+```{r}
+df %>%
+  ggplot()+
+  geom_bar(mapping = aes(x = Survived, colour = Sex))
+```
+
+```{r}
+df %>%
+  ggplot()+
+  geom_bar(mapping = aes(x = Survived, fill = Sex))
+```
+
+```{r}
+df %>%
+  filter(Pclass == 1) %>% 
+  ggplot()+
+  geom_bar(mapping = aes(x = Survived, fill = Sex))
+```
+
+```{r}
+df %>%
+  filter(Pclass == 3) %>% 
+  ggplot()+
+  geom_bar(mapping = aes(x = Survived, fill = Sex))
+```
+
+```{r}
+df %>%
+  ggplot()+
+  geom_bar(mapping = aes(x = Survived, fill = Sex))+
+  facet_wrap(~Pclass)
+```
+
+```{r}
+df %>% 
+  ggplot()+
+  geom_point(mapping = aes(x = Age, y = Fare))+
+  geom_smooth(mapping = aes(x = Age, y = Fare))
+
+```
+
