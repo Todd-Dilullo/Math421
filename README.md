@@ -15,4 +15,4 @@ This graph shows correlation Pclass and Survived: ['abc.png'](abc.png)
 
 This is my sixth assignment:[Assignment 6](assignment6.html)
 
-This is my seventh assignment:[Assignment 7](Assignment7.html)
+This is my seventh assignment:[Assignment 7](Assignment7(2).html)
