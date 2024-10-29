@@ -30,11 +30,24 @@ head(df)
 
 ```{r}
 # FIx the type of variable Date_reported
+# Echo=False means it will not show up on render
  df$Date_reported = as.Date(df$Date_reported)
  
 #We can do calculation on Date varibales
 mean(df$Date_reported)
 
 df$Date_reported[90000]-df$Date_reported[1]
+
+```
+
+```{r,eval=FALSE} #With eval=false, it wont render all data}
+df$Date_reported
+```
+
+```{r}
+df$New_cases2 = ifelse(df$New_cases==0, "No", "Yes")
+
+#Can we create a new variable with three categories using ifelse function???
+
 
 ```
