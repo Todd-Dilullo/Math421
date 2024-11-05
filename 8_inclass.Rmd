@@ -1,0 +1,58 @@
+---
+title: "gganimate"
+author: "Todd DiLullo"
+date: "2024-10-29"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(gganimate)
+library(tidyverse)
+library(ggplot2)
+library(knitr)
+```
+
+```{r}
+# Create a dataset
+data <- tibble(salary = c(1000, 2000), 
+               year = c(2019, 2020))
+kable(data)
+```
+```{r}
+#Static Plot
+ggplot(data,
+       aes(x = year,
+           y = salary))+
+geom_point(size = 4)
+```
+
+```{r}
+ggplot(data %>% filter(year==2019), 
+       aes(x = year, 
+           y = salary))+ 
+  geom_point(size=4)+
+  xlim(2019, 2020)+
+  ylim(1000, 2000)
+```
+```{r}
+ggplot(data %>% filter(year==2020), 
+       aes(x = year, 
+           y = salary))+ 
+  geom_point(size=4)+
+  xlim(2019, 2020)+
+  ylim(1000, 2000)
+```
+```{r}
+library(gifski)
+g <- ggplot(data, 
+       aes(x = year, 
+           y = salary))+
+  geom_point(size=4) + 
+  transition_states(year)
+animate(g)
+```
+
