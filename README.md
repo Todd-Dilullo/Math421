@@ -16,3 +16,7 @@ This graph shows correlation Pclass and Survived: ['abc.png'](abc.png)
 This is my sixth assignment:[Assignment 6](assignment6.html)
 
 This is my seventh assignment:[Assignment 7](Assignment7(2).html)
+
+This is my eight assignent:[Assignment 8](assignment8.html)
+
+This is my ninth assignment:[Assignment 9](assignment9.html)
