@@ -20,3 +20,9 @@ This is my seventh assignment:[Assignment 7](Assignment7(2).html)
 This is my eight assignent:[Assignment 8](assignment8.html)
 
 This is my ninth assignment:[Assignment 9](assignment9.html)
+
+This is my tenth assignment:[Assignment 10](assignment10.html)
+
+This is my eleventh assignment:[Assignment 11](assignment11.html)
+
+This is my twelfth assignment:[Assignment 12](assignment12.html)
