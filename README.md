@@ -27,6 +27,6 @@ This is my eleventh assignment:[Assignment 11](assignment11.html)
 
 This is my twelfth assignment:[Assignment 12](assignment12.html)
 
-Midterm Assignment: [Midterm Project](Midterm-project.html)
+Midterm Assignment: [Midterm Project](Midterm-Project.html)
 
 Midterm Presentation: [Midterm Presentation](Midterm-Presentation.html)
