@@ -1,0 +1,46 @@
+# Rhode Island DOH Data Presentation
+title: "Midterm Presentation"
+author: "Todd DiLullo"
+date: "2024-12-02"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Midterm Visualization and Modeling 
+
+
+## Visualization
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(knitr)
+library(dplyr)
+#df %>% filter(los <200, sex ==1|sex == 2) %>% ggplot()+
+  #geom_point(mapping = aes(x = los, y = total, color = factor(sex)))+
+  #labs(title = "Charges vs. Length of Stay", x = "Length of Stay (days)", y = "Total Charges", caption = "This plot shows the relationship between length of stay and total charges for patients") +
+  #theme_minimal()
+
+
+# This plot shows us that the longer patients stay, the higher their total charges will be. There is a relatively even spread of male and female charges
+```
+
+- ![](Charges by Length of Stay.png)
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+

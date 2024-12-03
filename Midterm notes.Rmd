@@ -1,0 +1,18 @@
+---
+title: "Midterm Notes"
+author: "Todd DiLullo"
+date: "2024-11-14"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r}
+# For Big data set can do 
+df1 = df[sample(1:100),] # to get a sample for df, you want to use a bigger example
+```
+
