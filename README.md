@@ -29,4 +29,4 @@ This is my twelfth assignment:[Assignment 12](assignment12.html)
 
 Midterm Assignment: [Midterm Project](Midterm-Project.html)
 
-Midterm Presentation: [Midterm Presentation](Midterm-Presentation.html)
+Midterm Presentation: [Midterm Presentation](MidtermPresentation.html)
