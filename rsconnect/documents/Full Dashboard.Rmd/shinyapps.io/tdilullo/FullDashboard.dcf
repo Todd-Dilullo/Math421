@@ -1,0 +1,12 @@
+name: FullDashboard
+title: FullDashboard
+username: tdilullo
+account: tdilullo
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13588085
+bundleId: 9511369
+url: https://tdilullo.shinyapps.io/FullDashboard/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
